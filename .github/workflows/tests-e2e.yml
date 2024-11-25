@@ -35,7 +35,7 @@ jobs:
   yarn-v1:
     name: E2E — Yarn v1
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     strategy:
       matrix:
         node: ['18.0', '20', '22']
@@ -75,7 +75,7 @@ jobs:
   yarn-berry:
     name: E2E — Yarn Berry
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     strategy:
       matrix:
         nodeLinker: [pnp, node-modules]
@@ -148,7 +148,7 @@ jobs:
   npm:
     name: E2E — npm
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     steps:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
@@ -188,7 +188,7 @@ jobs:
   pnpm:
     name: E2E — pnpm
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     steps:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1

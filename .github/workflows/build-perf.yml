@@ -35,7 +35,7 @@ jobs:
       pull-requests: write # for preactjs/compressed-size-action to write a PR review
     name: Build Size Report
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     strategy:
       matrix:
         DOCUSAURUS_INFRA: ['SLOWER', 'FASTER']
@@ -67,7 +67,7 @@ jobs:
   build-time:
     name: Build Time Perf
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     strategy:
       matrix:
         DOCUSAURUS_INFRA: ['SLOWER', 'FASTER']
